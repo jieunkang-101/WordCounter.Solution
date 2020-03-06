@@ -102,5 +102,17 @@ namespace WordCounter.Tests
       Assert.AreEqual(2, result);
     }
 
+    [TestMethod]
+    public void SearchWords_IgnoreLetterCase_NumberOfMatches()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("Cat", "I'm walking to the cathedral with my cAT Misty.");
+      
+      //Act
+      int result = RepeatCounter.SearchWords();
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
