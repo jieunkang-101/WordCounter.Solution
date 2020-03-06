@@ -52,6 +52,11 @@ namespace WordCounter.Models
           {
             count ++;
           }
+          // Check for Apostrophe
+          else if (wordCheck + "\'s" == sentenceCheck || wordCheck +"\'m" == sentenceCheck || wordCheck +"\'re" == sentenceCheck || wordCheck +"\'t" == sentenceCheck || wordCheck +"\ve" == sentenceCheck || wordCheck +"\'ll" == sentenceCheck)
+          {
+            count ++;
+          }
         }
       }
       return count;
