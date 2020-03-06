@@ -1,0 +1,55 @@
+# Word Counter
+
+#### Intermediate C# and Testing Independent Project, 6 March 2020
+
+#### By _**Jieun Kang**_
+
+## Description
+A program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. It checks for full word matches only. 
+
+## Setup/Installation Requirements
+
+### # Install C# and .NET
+
+**macOS**
+1. Download [.NET Core SDK (Software Development Kit)](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.106-macos-x64-installer)
+    * Click this link will prompt a `.pkg` file download from Microsoft.
+2. Open the file     
+    * This will launch an installer which will walk you through installation steps. Use the default settings the installer suggests.
+3. Confirm the installation is successful (2.2.105)
+    * Open your terminal and run the command <br/> `$ dotnet --version`    
+
+**Windows**
+1. Download [64-bit .NET Core SDK (Software Development Kit)](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.2.203-windows-x64-installer)
+    * Click this links will prompt a `.exe` file download from Microsoft.
+2. Open the file
+    * Follow the steps provided by the installer for your OS.
+3. Confirm the installation is successful
+    * Open a new Windows PowerShell window and run the command <br/> `$ dotnet --version`  
+
+### # Clone this repository
+1. Clone this project.
+    * `$ cd desktop`
+    * `$ git clone https://github.com/jieunkang-101/Bakery`
+    * `$ cd Bakery`
+2. Run this console application
+    * `$ dotnet run` 
+
+## Behavior Driven Development Specifications
+| Behavior(Spec) <img width=800/>    | Input <img width=400/>   | Output <img width=500/>  |
+| :---------------- | :-----: | :-----: |
+
+
+
+
+## Technologies Used
+
+* C#
+* .NET
+* MSTest
+
+### License
+
+*This webpage is licensed under the [MIT](https://en.wikipedia.org/wiki/MIT_License) license*
+
+Copyright &copy; 2020 **_Jieun Kang_**
