@@ -23,6 +23,10 @@ namespace WordCounter.Models
 
     public static bool CheckValidInput()
     {
+      if (Sentence.IndexOf(Word) != -1)
+      {
+        return true;
+      }
       return false;
     }
   }

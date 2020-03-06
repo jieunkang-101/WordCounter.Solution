@@ -30,10 +30,13 @@ namespace WordCounter.Tests
       //Assert
       CollectionAssert.AreEqual(newDictionary, result);
     }
-    
+
     [TestMethod]
     public void CheckValidInput()
     {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "This is test");
+
       //Act
       bool result = RepeatCounter.CheckValidInput();
 
