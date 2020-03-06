@@ -44,7 +44,7 @@ A program that gathers both a word and sentence from a user, then checks how fre
 | Program should check multiple instance of the inptted word |  W: the <br/> S: I'm walking to  **_the_** cathedral with  **_the_** cat. | 2 |
 | Program ignores partial matches in words | W: cat <br/> S: I'm walking to the  **_cat_** hedral with my  **_cat_** Misty. | 0 |
 | Program ignores letter cases when checking matches |  W: Cat <br/> S: I'm walking to the cathedral with my **_cAT_**  Misty. | 1 |
-| Program ignores punctuation when checking matches | W: cat <br/> S: I'm walking to the cathedral with my  **_cat._**  | 1 |
+| Program ignores punctuation(.,;:!?) when checking matches | W: cat <br/> S: I'm walking to the cathedral with my cat? cat! **_cat._**  | 3 |
 | Program ignores apostrophe when checking matches | W: I <br/> S: **_I_** 'm walking to the cathedral with my cat.  | 1 |
 
 ## Technologies Used

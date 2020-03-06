@@ -40,13 +40,14 @@ namespace WordCounter.Models
       int count = 0;
       string wordCheck;
       string sentenceCheck;
+      char[] charsToTrim = {',', '.', '\'', '\"', ' ', '!', '?', ';', ':'};
       foreach (KeyValuePair<string, string> matches in Match)
       {
         string[] sentenceArr = matches.Value.Split(" ");
         for (int i = 0; i < sentenceArr.Length; i++)
         {
           wordCheck = matches.Key.ToLower();
-          sentenceCheck = sentenceArr[i].ToLower();
+          sentenceCheck = sentenceArr[i].ToLower().Trim(charsToTrim);
           if (wordCheck == sentenceCheck)
           {
             count ++;

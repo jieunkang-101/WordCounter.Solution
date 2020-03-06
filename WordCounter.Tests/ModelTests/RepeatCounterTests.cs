@@ -119,13 +119,13 @@ namespace WordCounter.Tests
     public void SearchWords_IgnorePunctuation_NumberOfMatches()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("cat", "I'm walking to the cathedral with my cat.");
+      RepeatCounter newRepeatCounter = new RepeatCounter("cat", "I'm walking to the cathedral with my cat? cat! cat.!!");
       
       //Act
       int result = RepeatCounter.SearchWords();
 
       //Assert
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(3, result);
     }
   }
 }
