@@ -43,7 +43,7 @@ namespace WordCounter.Models
         string[] sentenceArr = matches.Value.Split(" ");
         for (int i = 0; i < sentenceArr.Length; i++)
         {
-          if (matches.Key == sentenceArr[i])
+          if (matches.Key.ToLower() == sentenceArr[i].ToLower())
           {
             count ++;
           }

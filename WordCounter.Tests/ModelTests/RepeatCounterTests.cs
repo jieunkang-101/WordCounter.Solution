@@ -99,7 +99,7 @@ namespace WordCounter.Tests
       int result = RepeatCounter.SearchWords();
 
       //Assert
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
 
     [TestMethod]
