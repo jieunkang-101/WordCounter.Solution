@@ -89,5 +89,18 @@ namespace WordCounter.Tests
       Assert.AreEqual(2, result);
     }
 
+    [TestMethod]
+    public void SearchWords_FindFullWordMatchesOnly_NumberOfMatches()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("cat", "I'm walking to the cathedral with my cat Misty.");
+      
+      //Act
+      int result = RepeatCounter.SearchWords();
+
+      //Assert
+      Assert.AreEqual(2, result);
+    }
+
   }
 }
