@@ -127,5 +127,19 @@ namespace WordCounter.Tests
       //Assert
       Assert.AreEqual(3, result);
     }
+
+    [TestMethod]
+    public void SearchWords_IgnoreApostrophe_NumberOfMatches()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("I", "I'm walking to the cathedral with my cat.");
+      
+      //Act
+      int result = RepeatCounter.SearchWords();
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
