@@ -29,5 +29,10 @@ namespace WordCounter.Models
       }
       return false;
     }
+
+    public static int SearchWords()
+    {
+      return 0;
+    }
   }
 }

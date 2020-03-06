@@ -32,7 +32,7 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckValidInput()
+    public void CheckValidInput_CheckIfMatchesExist_True()
     {
       //Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "This is test");
@@ -42,7 +42,19 @@ namespace WordCounter.Tests
 
       //Assert
       Assert.AreEqual(true, result);
+    }
 
+    [TestMethod]
+    public void SearchWords_FindSingleChar_NumberOfMatches()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("test", "This is test");
+
+      //Act
+      int result = RepeatCounter.SearchWords();
+
+      //Assert
+      Assert.AreEqual(1, result);
     }
   }
 }
