@@ -57,6 +57,11 @@ namespace WordCounter.Models
           {
             count ++;
           }
+          // Check for Plural
+          else if (wordCheck == sentenceCheck + "s" || wordCheck == sentenceCheck + "es")
+          {
+            count ++;
+          }
         }
       }
       return count;

@@ -145,13 +145,13 @@ namespace WordCounter.Tests
     public void SearchWords_CheckPlural_NumberOfMatches()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("cat", "I'm walking to the cathedral with my cats.");
+      RepeatCounter newRepeatCounter = new RepeatCounter("cats", "I'm walking to the cathedral with my cats. One cat is running after birds.");
       
       //Act
       int result = RepeatCounter.SearchWords();
 
       //Assert
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(2, result);
     }
 
 

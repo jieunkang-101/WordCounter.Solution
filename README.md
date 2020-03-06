@@ -47,7 +47,7 @@ A program that gathers both a word and sentence from a user, then checks how fre
 | Program ignores punctuation(.,;:!?) when checking matches | W: cat <br/> S: I'm walking to the cathedral with my **_cat? cat! cat._**  | 3 |
 | Program ignores apostrophe(e.g.: I'm, cat's, you're, don't, I've, I'll) when checking matches | W: I <br/> S: **_I_** 'm walking to the cathedral with my cat. **_I_** 'll be home soon. | 2 |
 | If user input singular word, program will check plural versions of the word, too. | W: cat <br/> S: I'm walking to the cathedral with my **_cats_** | 1 |
-| If user input plular word, progrma will only check the plural versions of the word. | W: cats <br/> S: I'm walking to the cathedral with my **_cat_** | 0 |
+| If user input plular word, progrma will only check the plural versions of the word. | W: cats <br/> S: I'm walking to the cathedral with my **_cat_**. One **_cat_** is running after birds. | 2 |
 
 ## Technologies Used
 
