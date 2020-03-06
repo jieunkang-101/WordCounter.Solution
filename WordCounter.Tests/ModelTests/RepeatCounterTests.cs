@@ -38,16 +38,16 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void CheckValidInput_CheckIfMatchesExist_True()
+    public void CheckValidInput_CheckIfMatchesExist_False()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("test", "This is test");
+      RepeatCounter newRepeatCounter = new RepeatCounter("this", "I'm walking to the cathedral with a cat.");
 
       //Act
       bool result = RepeatCounter.CheckValidInput();
 
       //Assert
-      Assert.AreEqual(true, result);
+      Assert.AreEqual(false, result);
     }
 
     [TestMethod]
@@ -61,7 +61,20 @@ namespace WordCounter.Tests
 
       //Assert
       Assert.AreEqual(1, result);
-
     }
+
+    [TestMethod]
+    public void SearchWords_FindMultiChar_NumberOfMatches()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("walking", "I'm walking to the cathedral with a cat.");
+      
+      //Act
+      int result = RepeatCounter.SearchWords();
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
