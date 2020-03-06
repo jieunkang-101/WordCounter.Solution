@@ -29,7 +29,16 @@ namespace WordCounter.Tests
 
       //Assert
       CollectionAssert.AreEqual(newDictionary, result);
+    }
+    
+    [TestMethod]
+    public void CheckValidInput()
+    {
+      //Act
+      bool result = RepeatCounter.CheckValidInput();
 
+      //Assert
+      Assert.AreEqual(true, result);
 
     }
   }

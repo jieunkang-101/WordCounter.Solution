@@ -21,6 +21,9 @@ namespace WordCounter.Models
       return Match;
     }
 
-
+    public static bool CheckValidInput()
+    {
+      return false;
+    }
   }
 }
