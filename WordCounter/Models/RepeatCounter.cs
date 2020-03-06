@@ -16,6 +16,11 @@ namespace WordCounter.Models
       Match[word] = sentence;
     }
 
+    public static void ClearAll()
+    {
+      Match.Clear();
+    }
+
     public static Dictionary<string, string> GetAll()
     {
       return Match;
@@ -32,7 +37,19 @@ namespace WordCounter.Models
 
     public static int SearchWords()
     {
-      return 0;
+      int count = 0;
+      foreach (KeyValuePair<string, string> matches in Match)
+      {
+        string[] sentenceArr = matches.Value.Split(" ");
+        for (int i = 0; i < sentenceArr.Length; i++)
+        {
+          if (matches.Key == sentenceArr[i])
+          {
+            count ++;
+          }
+        }
+      }
+      return count;
     }
   }
 }

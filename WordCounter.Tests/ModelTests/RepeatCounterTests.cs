@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System;
 using WordCounter.Models;
 
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class RepeatCounterTests
+  public class RepeatCounterTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      RepeatCounter.ClearAll();
+    }
 
     [TestMethod]
     public void RepeatCounter_CreateInstance_NewInstance()
@@ -48,13 +54,14 @@ namespace WordCounter.Tests
     public void SearchWords_FindSingleChar_NumberOfMatches()
     {
       //Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter("test", "This is test");
-
+      RepeatCounter newRepeatCounter = new RepeatCounter("a", "I'm walking to the cathedral with a cat.");
+      
       //Act
       int result = RepeatCounter.SearchWords();
 
       //Assert
       Assert.AreEqual(1, result);
+
     }
   }
 }
