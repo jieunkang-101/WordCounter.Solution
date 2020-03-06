@@ -76,5 +76,18 @@ namespace WordCounter.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void SearchWords_FindMultipleIstance_NumberOfMatches()
+    {
+      //Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter("the", "I'm walking to the cathedral with the cat.");
+      
+      //Act
+      int result = RepeatCounter.SearchWords();
+
+      //Assert
+      Assert.AreEqual(2, result);
+    }
+
   }
 }
