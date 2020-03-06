@@ -42,7 +42,7 @@ A program that gathers both a word and sentence from a user, then checks how fre
 | User inputs a single character word to match, and matches exist | W: a <br/> S: I'm walking to the cathedral with **_a_** cat. | 1 |
 | User inputs a multi character word to match, and matches exist | W: walking <br/> S: I'm  **_walking_** to the cathedral with a cat. | 1 |
 | Program should check multiple instance of the inptted word |  W: the <br/> S: I'm walking to  **_the_** cathedral with  **_the_** cat. | 2 |
-| Program ignores letter cases when checking matches |  W: CAT <br/> S: I'm walking to the cathedral with the **_cat_**. | 2 |
+| Program ignores letter cases when checking matches |  W: CAT <br/> S: I'm walking to the cathedral with the **_cat_**. | 1 |
 | Program ignores partial matches in words | W: cat <br/> S: I'm walking to the  **_cat_** hedral with the  **_cat_**. | 1 |
 | Program ignores punctuation when checking matches | W: cat <br/> S: I'm walking to the cathedral with a  **_cat._**  | 1 |
 

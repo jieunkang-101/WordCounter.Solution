@@ -4,9 +4,9 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    public string Word { get; set; }
-    public string Sentence { get; set; }
-    public int Count { get; set; }
+    public static string Word { get; set; }
+    public static string Sentence { get; set; }
+    public static int Count { get; set; }
     public static Dictionary<string, string> Match { get; set; } = new Dictionary<string, string> {};
 
     public RepeatCounter(string word, string sentence)
@@ -15,5 +15,12 @@ namespace WordCounter.Models
       Sentence = sentence;
       Match[word] = sentence;
     }
+
+    public static Dictionary<string, string> GetAll()
+    {
+      return Match;
+    }
+
+
   }
 }

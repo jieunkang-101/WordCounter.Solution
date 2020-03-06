@@ -14,5 +14,23 @@ namespace WordCounter.Tests
       RepeatCounter newRepeatCounter = new RepeatCounter("test", "This is test");
       Assert.AreEqual(typeof(RepeatCounter), newRepeatCounter.GetType());
     }
+
+    [TestMethod]
+    public void GetAll_ResturnsMatches_MatchDictionary()
+    {
+      //Arrange
+      string word = "test";
+      string sentence = "This is test.";
+      RepeatCounter newRepeatCounter = new RepeatCounter(word, sentence);
+      Dictionary<string, string> newDictionary = new Dictionary<string, string> {{word, sentence}};
+
+      //Act
+      Dictionary<string, string> result = RepeatCounter.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newDictionary, result);
+
+
+    }
   }
 }
