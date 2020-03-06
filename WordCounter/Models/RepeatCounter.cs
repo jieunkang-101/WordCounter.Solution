@@ -38,12 +38,16 @@ namespace WordCounter.Models
     public static int SearchWords()
     {
       int count = 0;
+      string wordCheck;
+      string sentenceCheck;
       foreach (KeyValuePair<string, string> matches in Match)
       {
         string[] sentenceArr = matches.Value.Split(" ");
         for (int i = 0; i < sentenceArr.Length; i++)
         {
-          if (matches.Key.ToLower() == sentenceArr[i].ToLower())
+          wordCheck = matches.Key.ToLower();
+          sentenceCheck = sentenceArr[i].ToLower();
+          if (wordCheck == sentenceCheck)
           {
             count ++;
           }
