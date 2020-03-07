@@ -6,7 +6,6 @@ namespace WordCounter.Models
   {
     public static string Word { get; set; }
     public static string Sentence { get; set; }
-    public static int Count { get; set; }
     
     public RepeatCounter(string word, string sentence)
     {
@@ -30,24 +29,25 @@ namespace WordCounter.Models
       string sentenceCheck;
       char[] charsToTrim = {',', '.', '\'', '\"', ' ', '!', '?', ';', ':'};
       string[] sentenceArr = Sentence.Split(" ");
-        for (int i = 0; i < sentenceArr.Length; i++)
+      
+      for (int i = 0; i < sentenceArr.Length; i++)
+      {
+        sentenceCheck = sentenceArr[i].ToLower().Trim(charsToTrim);
+        if (wordCheck == sentenceCheck)
         {
-          sentenceCheck = sentenceArr[i].ToLower().Trim(charsToTrim);
-          if (wordCheck == sentenceCheck)
-          {
-            count ++;
-          }
-          // Check for Apostrophe
-          else if (wordCheck.Length > 1 && wordCheck + "\'s" == sentenceCheck || wordCheck +"\'m" == sentenceCheck || wordCheck +"\'re" == sentenceCheck || wordCheck +"\'t" == sentenceCheck || wordCheck +"\ve" == sentenceCheck || wordCheck +"\'ll" == sentenceCheck)
-          {
-            count ++;
-          }
-          // Check for Plural
-          else if (wordCheck.Length > 1 && wordCheck + "s" == sentenceCheck  || wordCheck + "es" == sentenceCheck)
-          {
-            count ++;
-          }
+          count ++;
         }
+        // Check for Apostrophe
+        else if (wordCheck.Length > 1 && wordCheck + "\'s" == sentenceCheck || wordCheck +"\'m" == sentenceCheck || wordCheck +"\'re" == sentenceCheck || wordCheck +"\'t" == sentenceCheck || wordCheck +"\ve" == sentenceCheck || wordCheck +"\'ll" == sentenceCheck)
+        {
+          count ++;
+        }
+        // Check for Plural
+        else if (wordCheck.Length > 1 && wordCheck + "s" == sentenceCheck  || wordCheck + "es" == sentenceCheck)
+        {
+          count ++;
+        }
+      }
       return count;
     }
   }
