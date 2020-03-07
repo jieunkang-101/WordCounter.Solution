@@ -25,7 +25,6 @@ namespace WordCounter
       if (RepeatCounter.CheckValidInput() == true)
       {
         Console.WriteLine($"Your word \"{userWord}\" appears {RepeatCounter.SearchWords()} times in your sentence.");
-          ;
       }
       else 
       {
@@ -40,7 +39,7 @@ namespace WordCounter
 
       if (response == "y")
       {
-        CountWord();
+        Main();
       }
       else if (response == "n")
       {
