@@ -53,12 +53,12 @@ namespace WordCounter.Models
             count ++;
           }
           // Check for Apostrophe
-          else if (wordCheck + "\'s" == sentenceCheck || wordCheck +"\'m" == sentenceCheck || wordCheck +"\'re" == sentenceCheck || wordCheck +"\'t" == sentenceCheck || wordCheck +"\ve" == sentenceCheck || wordCheck +"\'ll" == sentenceCheck)
+          else if (wordCheck.Length > 1 && wordCheck + "\'s" == sentenceCheck || wordCheck +"\'m" == sentenceCheck || wordCheck +"\'re" == sentenceCheck || wordCheck +"\'t" == sentenceCheck || wordCheck +"\ve" == sentenceCheck || wordCheck +"\'ll" == sentenceCheck)
           {
             count ++;
           }
           // Check for Plural
-          else if (wordCheck + "s" == sentenceCheck  || wordCheck + "es" == sentenceCheck)
+          else if (wordCheck.Length > 1 && wordCheck + "s" == sentenceCheck  || wordCheck + "es" == sentenceCheck)
           {
             count ++;
           }
